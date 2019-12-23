@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/webpage/node_modules/gh-pages/.cache/github.com!arjunramesh99!Personal-Website.git" vcs="Git" />
   </component>
 </project>
