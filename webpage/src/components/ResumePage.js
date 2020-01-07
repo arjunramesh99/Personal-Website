@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 {/* 1250x920 */}
-export default function ProjectsPage() {
+export default function ResumePage() {
     return (
         <Iframe src={resume}
                 id="resume_id"

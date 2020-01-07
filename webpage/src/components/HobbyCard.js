@@ -6,6 +6,8 @@ import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import grey from "@material-ui/core/colors/grey";
 import amber from "@material-ui/core/colors/amber";
+import indigo from "@material-ui/core/colors/indigo"
+import Divider from '@material-ui/core/Divider';
 
 const DP_side = 355;
 
@@ -26,9 +28,10 @@ const useStyles = makeStyles(theme => ({
         width: DP_side,
         marginRight: 0,
         '&:hover': {
-            background: grey[100],
+            background: amber[100],
             height: DP_side * 2,
             minWidth: DP_side * 2 + 30,
+            borderRadius: 10
         }
     },
     link_bar: {
@@ -47,7 +50,8 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         position: 'absolute',
-        fontSize: 48,
+        width: 320,
+        fontSize: 52,
         color: amber[50],
         fontWeight: 'bold',
         fontFamily: 'Garamond',
@@ -57,27 +61,43 @@ const useStyles = makeStyles(theme => ({
         marginTop: 20,
         marginBottom: 20,
         // marginLeft: 10,
+    },
+    back_title: {
+        textAlign: 'center',
+        fontSize: 30,
+        fontFamily: "Garamond",
+        fontWeight: 'bold',
+        marginTop: 10,
+        //color: amber[50]
+    },
+    divider: {
+        marginBottom: 20
     }
 }))
 
 
-export default function HobbyCard() {
+export default function HobbyCard(props) {
     const classes = useStyles();
+    let title_length = 160 - 11*props.title.length;
     return (
         <FlippingCard className={classes.flip_card}>
             <FlippingCardFront>
                 <Card className={classes.card}>
                     <CardMedia className={classes.media}
-                               title="SpeedCubing"
-                               image={require("../images/Cubing/Cubing_DP.jpg")}
+                               title={props.title}
+                               image={props.image}
                     />
                 </Card>
-                <Typography className={classes.title} style={{left: "15%"}}>
-                    Speedcubing
+                <Typography className={classes.title} style={{left: title_length}}>
+                    {props.title}
                 </Typography>
             </FlippingCardFront>
             <FlippingCardBack>
-                Back content
+                <div className={classes.back_title}>
+                    {props.title}
+                </div>
+                <Divider className={classes.divider} variant="middle" />
+                {props.content}
             </FlippingCardBack>
         </FlippingCard>
     )
