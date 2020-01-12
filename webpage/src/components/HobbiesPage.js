@@ -1,17 +1,20 @@
 import React from 'react';
 import Grid from "@material-ui/core/Grid";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import HobbyCard from "./HobbyCard";
+import HobbyCard from "./Hobbies/HobbyCard";
 
-import cube from "../images/Hobbies/Cubing_DP.jpg";
-import piano from "../images/Hobbies/Piano_DP.jpg";
-import guitar from "../images/Hobbies/Guitar_DP.jpg";
-import badminton from "../images/Hobbies/Badminton_DP.jpg";
-import trekking from "../images/Hobbies/Trekking_DP.jpg";
-import running from "../images/Hobbies/Running_DP.jpg";
+import cube from "./images/Hobbies/Cubing_DP.jpg";
+import piano from "./images/Hobbies/Piano_DP.jpg";
+import guitar from "./images/Hobbies/Guitar_DP.jpg";
+import badminton from "./images/Hobbies/Badminton_DP.jpg";
+import trekking from "./images/Hobbies/Trekking_DP.jpg";
+import running from "./images/Hobbies/Running_DP.jpg";
 import Speedcubing from "./Hobbies/Speedcubing";
 import Guitar from "./Hobbies/Guitar";
 import Piano from "./Hobbies/Piano";
+import Trekking from "./Hobbies/Trekking";
+import Badminton from  "./Hobbies/Badminton";
+import Running from "./Hobbies/Running";
 
 const DP_side = 355;
 
@@ -45,17 +48,17 @@ const hobby_description = [
     {
         title: "Badminton",
         image: badminton,
-        content: 3
+        content: <Badminton/>
     },
     {
         title: "Trekking",
         image: trekking,
-        content: 4
+        content: <Trekking/>
     },
     {
         title: "Running",
         image: running,
-        content: 5
+        content: <Running/>
     },
 ];
 

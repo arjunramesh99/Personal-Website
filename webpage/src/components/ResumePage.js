@@ -1,4 +1,4 @@
-import resume from "../images/Resume/Resume_Latest.pdf";
+import resume from "./images/Resume/Resume_Latest.pdf";
 import React from 'react';
 import Iframe from 'react-iframe';
 import {makeStyles} from "@material-ui/core";
