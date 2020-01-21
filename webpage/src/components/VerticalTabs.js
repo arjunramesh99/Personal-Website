@@ -12,10 +12,12 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import EmailIcon from '@material-ui/icons/Email';
 import HomePage from "./HomePage";
 import HobbiesPage from "./HobbiesPage";
 import ProjectsPage from "./ProjectsPage";
 import ResumePage from "./ResumePage";
+import GalleryPage from "./GalleryPage";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -50,7 +52,7 @@ function a11yProps(index) {
 const nameMargin = 0;
 const link_height = 40;
 const name_tab_height = 150;
-const tab_height = 100;
+const tab_height = 90;//100;
 const name_tab_width = 300; //
 const tab_width = 270 + 2*nameMargin;
 const link_count = 4;
@@ -149,9 +151,9 @@ const useStyles = makeStyles(theme => ({
 
 export default function VerticalTabs() {
     const classes = useStyles();
-    const [value, setValue] = React.useState(2);
-    const tabs = ['Home', 'Hobbies and Interests', 'Personal Projects', 'Resume / CV'];
-    const tabs_content = [<HomePage/>, <HobbiesPage/>, <ProjectsPage/>, <ResumePage/>];
+    const [value, setValue] = React.useState(1);
+    const tabs = ['Home', 'Hobbies and Interests', 'Personal Projects', 'Resume / CV', 'Travel Gallery'];
+    const tabs_content = [<HomePage/>, <HobbiesPage/>, <ProjectsPage/>, <ResumePage/>, <GalleryPage/>];
     const links_labels = ['Github', 'LinkedIn', 'Facebook', 'Youtube'];
     const links_icons = [<GitHubIcon/>, <LinkedInIcon/>, <FacebookIcon/>, <YouTubeIcon/>]
     const links_url = ['https://github.com/arjunramesh99', 'https://www.linkedin.com/in/ajramesh/', 'https://www.facebook.com/arjun.ramesh.9066?ref=bookmarks', 'https://www.youtube.com/channel/UCQLPzl1LHeF25W3SiKSAqGQ?view_as=subscriber'];
@@ -174,7 +176,7 @@ export default function VerticalTabs() {
 
                 {/* Render Tabs */}
                 <Button classes={{root: classes.nameButton, disabled: classes.disabled, label: classes.label}} disabled>
-                    Arjun Ramesh
+                        Arjun Ramesh
                 </Button>
                 {tabs.map((name, index) =>
                     <Tab className={classes.tab} label={name} {...a11yProps({index})}/>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from "@material-ui/core/Grid";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import HobbyCard from "./Hobbies/HobbyCard";
+import HobbyCard from "./utlilty/HobbyCard";
 
 import cube from "./images/Hobbies/Cubing_DP.jpg";
 import piano from "./images/Hobbies/Piano_DP.jpg";
@@ -23,6 +23,7 @@ const useStyles = makeStyles(theme => ({
     grid: {
         marginTop: 20,
         marginBottom: 20,
+        paddingRight: 50,
         // marginLeft: 10,
     }
 }))
@@ -34,9 +35,10 @@ const hobby_description = [
         content: <Speedcubing/>
     },
     {
-        title: "Guitar",
+        title: "Organizing Chairs",
         image: guitar,
-        content: <Guitar/>
+        content: <Guitar/>,
+        lines: 2
     },
     {
         title: "Piano",
@@ -66,10 +68,14 @@ export default function ProjectsPage() {
 
     return (
         <div>
-            {[...Array(3)].map((a, row) =>
-                <Grid container justify="space-around" spacing={8} className={classes.grid}>
-                    {[...Array(2)].map((b, col) => {
-                        let index = 2*row + col;
+            <div>
+                <b>Under Development</b>
+            </div>
+            <Grid container justify="center" spacing={2} className={classes.grid} />
+            {[...Array(2)].map((a, row) =>
+                <Grid container justify="center" spacing={2} className={classes.grid}>
+                    {[...Array(3)].map((b, col) => {
+                        let index = 3*row + col;
                         let hobby = hobby_description[index];
                         return (
                             <Grid item xs={{gridSize}}>

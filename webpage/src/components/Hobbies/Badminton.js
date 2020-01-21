@@ -23,7 +23,7 @@ export default function Badminton() {
                             <li> Started serious badminton training at the age of 11. It was my prime sport of interest. </li>
                             <li> Participated competitively in local, and state tournaments.
                                 Won school tournaments and runner-up in the Cosmopolitan Club Tournament at the age of 12. </li>
-                            <li> Trained in Bangalore and Chennai under intense fitness stamina and speed training. </li>
+                            <li> Trained in Bangalore and Chennai for fitness, stamina, and speed training. </li>
                         </ul>
 
                     </InfoCard>

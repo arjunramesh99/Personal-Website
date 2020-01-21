@@ -45,10 +45,9 @@ export default function Running() {
                 <Grid item xs={5}>
                     <InfoCard anec>
                         My first unofficial 10K was done at the age of 11.
-                        <br/>
                         My first <i><b>official</b></i> one was done in 2013 at Auroville at the age of 12.
-                        I was initially not allowed to register because I had to sign a waiver
-                        saying I was over the age of 13 for safety reasons!
+                        I was initially not allowed to register because I had to be
+                        <i>over the age of 13</i> to participate for safety reasons!
                         But with certain amount of assurance from my dad, I finally completed it in <i>53</i> minutes!
                     </InfoCard>
                 </Grid>

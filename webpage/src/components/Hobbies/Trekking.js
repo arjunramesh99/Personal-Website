@@ -30,7 +30,7 @@ export default function Trekking() {
                             <li> From a young age, I loved mountains. Stemmed from my dad's passion for it,
                                 and he would often take me along. </li>
                             <li> Have trekked around the world, including
-                                India, Australia, California, and Nepal. </li>
+                                India, Australia, and Nepal. </li>
                             <li> My largest trek was the <i>Annapurna Circuit</i> in the <b>Himalayas</b> (Nepal) at the age of 14.</li>
                         </ul>
                     </InfoCard>
@@ -41,7 +41,7 @@ export default function Trekking() {
                         We trekked for 10 days, starting from low-altitude greenery to snow-capped peaks,
                         covering a distance of <b>180 km</b> and a peak height of <b>5416 m</b>.
                         <br/> The last ascent (<i>Thorung-La</i> peak) was a 900m climb and a 1200m drop in one day!
-                        We started at 3 am, in the pitch-darkness and freezing cold , and ended in the evening.
+                        We started at 3 am, in the pitch-darkness and freezing cold, and ended at 4 pm.
                     </InfoCard>
                 </Grid>
             </Grid>

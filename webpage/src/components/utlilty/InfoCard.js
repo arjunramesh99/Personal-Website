@@ -4,6 +4,7 @@ import Card from "@material-ui/core/Card";
 import orange from "@material-ui/core/colors/orange";
 import amber from "@material-ui/core/colors/amber";
 import Typography from "@material-ui/core/Typography";
+import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
     desc_card: {
@@ -37,7 +38,7 @@ export default function InfoCard(props) {
     const classes = useStyles();
     let title = props.title || (props.anec ? "Fun Facts!" : "Background");
     return (
-        <Card raised className={props.anec ? classes.anec_card : classes.desc_card}>
+        <Card raised className={clsx(props.className, (props.anec ? classes.anec_card : classes.desc_card))}>
             <Typography variant="h6" align='center' className={classes.subheading}>
                 {title}
             </Typography>

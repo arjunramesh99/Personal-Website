@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from "@material-ui/core/Grid";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import HobbyCard from "./Hobbies/HobbyCard";
+import HobbyCard from "./utlilty/HobbyCard";
 
 import cube from "./images/Hobbies/Cubing_DP.jpg";
 import piano from "./images/Hobbies/Piano_DP.jpg";
@@ -25,7 +25,13 @@ const useStyles = makeStyles(theme => ({
     grid: {
         marginTop: 20,
         marginBottom: 20,
+        paddingRight: 50,
         // marginLeft: 10,
+    },
+    heading: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        textAlign: 'center'
     }
 }))
 
@@ -68,8 +74,11 @@ export default function HobbiesPage() {
 
     return (
         <div>
+        <div className={classes.heading}>
+            Hobbies and Interests
+        </div>
             {[...Array(2)].map((a, row) =>
-                <Grid container spacing={2} className={classes.grid}>
+                <Grid container spacing={2} justify="center" className={classes.grid}>
                     {[...Array(3)].map((b, col) => {
                         let index = 3*row + col;
                         let hobby = hobby_description[index];
