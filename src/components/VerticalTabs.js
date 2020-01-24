@@ -53,9 +53,10 @@ const nameMargin = 0;
 const link_height = 40;
 const name_tab_height = 150;
 const tab_height = 90;//100;
-const name_tab_width = 300; //
-const tab_width = 270 + 2*nameMargin;
 const link_count = 4;
+
+const tab_margin_percent = 12;
+const tabs_width_percent = 14;
 // 224*4.3
 const useStyles = makeStyles(theme => ({
     root: {
@@ -69,18 +70,19 @@ const useStyles = makeStyles(theme => ({
         borderRight: `5px solid ${theme.palette.divider}`,
         background: amber[50],
         overflow: "hidden",
-        width: name_tab_width + 8
-        //width: "16vw"
+        //width: name_tab_width + 8
+        width: `${tabs_width_percent}vw`
     },
     tab: {
         textTransform: 'none',
         background: 'linear-gradient(90deg, #FFF176 30%, #FFE082 90%)',
-        minWidth: tab_width,//270 + 2*nameMargin,
+        maxWidth: 1000,
+        width: `${100 - tab_margin_percent}%`,
         borderRadius: 7,
         minHeight: tab_height,
         height: tab_height,
         marginBottom: 5,
-        marginLeft: 30,
+        marginLeft: `${tab_margin_percent}%`,
         boxShadow: "0 3px 5px 2px #FFB300",
         fontSize: 17,
         fontStyle: 'italic',
@@ -90,8 +92,8 @@ const useStyles = makeStyles(theme => ({
     nameButton: {
         textTransform: 'none', // Yellow[300] to Amber[200]
         background: 'linear-gradient(90deg, #FFF176 30%, #FFE082 90%)',
-        minWidth: name_tab_width,
-        width: name_tab_width,
+        minWidth: 100,
+        width: "100%",
         //borderRadius: 20,
         minHeight: name_tab_height,
         height:  name_tab_height,
@@ -108,13 +110,11 @@ const useStyles = makeStyles(theme => ({
     link: {
         textTransform: 'none',
         background: 'linear-gradient(90deg, #FFF176 30%, #FFE082 90%)',
-        minWidth: tab_width,//270 + 2*nameMargin,
         border: 'none',
         borderRadius: 7,
-        width: tab_width,
+        width: "100%",
         minHeight: link_height,
         height:  link_height,
-        marginLeft: 30,
         fontSize: 17,
         fontStyle: 'italic',
         //fontWeight: 'bold',
@@ -122,18 +122,21 @@ const useStyles = makeStyles(theme => ({
     },
     link_group: {
         position: 'absolute',
-        bottom: 0
+        bottom: 0,
+        //width: "100%",
+        width: `${100 - tab_margin_percent}%`,
+        marginLeft:`${tab_margin_percent}%`,
     },
     follow_style: {
         position: 'absolute',
         bottom: link_count * link_height + 4,
         textTransform: 'none',
-        minWidth: tab_width,//270 + 2 * nameMargin,
-        width: tab_width,
+        //width: "100%",
+        width: `${100 - tab_margin_percent}%`,
+        marginLeft: `${tab_margin_percent}%`,
         border: 'none',
         minHeight: link_height,
         height: link_height,
-        marginLeft: 30,
         fontSize: 21,
         fontStyle: 'italic',
         //fontWeight: 'bold',
@@ -144,7 +147,7 @@ const useStyles = makeStyles(theme => ({
     },
     tabPanel: {
         overflowY: "auto",
-        width: "85vw"
+        width: `${100 - tabs_width_percent}vw`
     },
     disabled: {},
 }));

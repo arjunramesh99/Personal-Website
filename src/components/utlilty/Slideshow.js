@@ -10,17 +10,18 @@ const useStyles = makeStyles(theme => ({
     },
     image: {
         width: "100%",
-        height: "100%",
+        //height: "100%",
+        height: 700,
         borderRadius: 30
     }
 }));
 
 const properties = {
-    duration: 5000,
-    transitionDuration: 500,
+    duration: 4000,
+    transitionDuration: 1000,
     arrows: false,
     infinite: true,
-    scale: 0.3,
+    //scale: 0.3,
     onChange: (oldIndex, newIndex) => {
         console.log(`slide transition from ${oldIndex} to ${newIndex}`);
     }

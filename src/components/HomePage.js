@@ -3,8 +3,9 @@ import ReactContactForm from 'react-mail-form';
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import TextField from "@material-ui/core/TextField";
 import DP from "./images/Home/DP.jpg";
-import lake from './images/Hobbies/Trek_Lake.jpg';
-import finish from './images/Hobbies/Trek_Finish.jpg';
+import DP2 from './images/Home/DP_2.jpg';
+import BridgeNormal from './images/Home/Bridge_Normal.jpg';
+import Fountain from './images/Home/Fountain.jpg';
 import InfoCard from "./utlilty/InfoCard";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -88,9 +89,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const slides = [
+    BridgeNormal,
     DP,
-    lake,
-    finish
+    DP2,
+    Fountain
 ];
 
 export default function HomePage() {
