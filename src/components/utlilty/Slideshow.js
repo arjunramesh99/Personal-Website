@@ -6,12 +6,12 @@ const useStyles = makeStyles(theme => ({
     dp: {
         position: "relative",
         width: "100%",
+        height: "100%",
         padding: 30,
     },
     image: {
         width: "100%",
-        //height: "100%",
-        height: 700,
+        height: "100%",
         borderRadius: 30
     }
 }));
